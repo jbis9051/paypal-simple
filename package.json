@@ -9,8 +9,11 @@
   "keywords": [],
   "author": "Josh Brown",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbis9051/paypal-simple"
+  },
   "dependencies": {
-    "@paypal/checkout-server-sdk": "^1.0.1",
-    "request-promise": "^4.2.5"
+    "@paypal/checkout-server-sdk": "^1.0.1"
   }
 }
