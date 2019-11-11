@@ -1,5 +1,5 @@
 const config = require('./config.json');
-const PayPalSimple = require('../src/PayPalSimple');
+const {PayPalSimple} = require('../index.js');
 
 async function main() {
     const payPalSimple = new PayPalSimple(config.clientId, config.secret, true);

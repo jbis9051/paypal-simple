@@ -22,6 +22,8 @@ class Order {
           //  console.error(this.responses.create);
             throw new Error("Error creating order");
         }
+        this.approve_url = this.responses.create.result.links.find(el => el.rel === "approve").href;
+        return this.approve_url;
     }
 
     async capture(){
