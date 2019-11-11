@@ -71,6 +71,7 @@ class Order {
                 },
                 "purchase_units": [
                     {
+                        "custom_id": options.custom_id || "",
                         "amount": {
                             "currency_code": "USD",
                             "value": options.amount

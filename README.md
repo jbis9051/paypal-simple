@@ -28,7 +28,7 @@ const order = payPalSimple.createOrder(options);
 - options.return_url - return url if the user authorizes the payment
 - option.cancel_url - return url if the user cancels the transaction
 - option.amount - float value in USD to charge
-
+- option.custom_id - (optional) - custom id for tracking type of payment
 
 ##### options.type === "extensive"
 
