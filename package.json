@@ -1,6 +1,6 @@
 {
   "name": "paypal-simple",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A really simple PayPal API module. Too simple for most projects.",
   "main": "index.js",
   "scripts": {
