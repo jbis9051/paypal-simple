@@ -13,9 +13,13 @@ class PayPalSimple {
     }
 
     async createOrder(options) {
-        const order = new Order(options, this.paypalClient);
-        await order.create();
+        const order = new Order(this.paypalClient);
+        await order.create(options);
         return order;
+    }
+
+    getPreviousOrder(id){
+        return new Order(this.paypalClient, id);
     }
 }
 module.exports = PayPalSimple;

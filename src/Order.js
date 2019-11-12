@@ -1,18 +1,18 @@
 const paypal = require('@paypal/checkout-server-sdk');
 
 class Order {
-    constructor(options, payPalClient) {
-        this.body = Order.buildRequestBody(options);
+    constructor(payPalClient, id = null) {
         this.payPalClient = payPalClient;
         this.responses = {
             create: null,
             capture: null,
             refund: null
         };
-        this.amount = options.amount || options.body.amount;
+        this.id = id;
     }
 
-    async create() {
+    async create(options) {
+        this.body = Order.buildRequestBody(options);
         const request = new paypal.orders.OrdersCreateRequest();
         request.headers["prefer"] = "return=representation";
         request.requestBody(this.body);
